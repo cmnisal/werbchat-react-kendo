@@ -10,18 +10,20 @@ class App extends React.Component {
         super(props);
         this.state = { messages: [] };
         this.client = new DirectLine({
-            secret: "ew0KICAiYWxnIjogIlJTMjU2IiwNCiAgImtpZCI6ICJMaXMyNEY4cUFxa2VQeW1ZUk9xVzd3anJKdFEiLA0KICAieDV0IjogIkxpczI0RjhxQXFrZVB5bVlST3FXN3dqckp0USIsDQogICJ0eXAiOiAiSldUIg0KfQ.ew0KICAiYm90IjogIlRFU1QtU0FNLUJPVCIsDQogICJzaXRlIjogImFkbEtoSk9vLVYwIiwNCiAgImNvbnYiOiAiNXd3M3ozQWtNSDE0WWlacENyN2xDOC1uIiwNCiAgInVzZXIiOiAiZGxfMTRiMWVjZmFkZGUxYWQyZTllYWFmN2EwMWU0YjgxOTAiLA0KICAibmJmIjogMTU5MDQ1NDUyOCwNCiAgImV4cCI6IDE1OTA0NTgxMjgsDQogICJpc3MiOiAiaHR0cHM6Ly9kaXJlY3RsaW5lLmJvdGZyYW1ld29yay5jb20vIiwNCiAgImF1ZCI6ICJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8iDQp9.jiL5ywHrMb1-Qn1pWffeApxgB2MfHVab00TuZJXsAyoIAbh0bMcAbhxtt1veVTRCAyqDKmfRcYaycO0LAVegEO12PrThAvI584hCLuMaaz1eov9S3aSxolQZIJUb2t62aGm5AGvCPBYXaganKeb6bclGSSsli_CwKwe8YB5Q0eDFdimF5WdpAXgfpjCW6B1G_Al2kvFwbrpmzGihsQUPqqO-OZrJ49EsqZ0b6sxP90fL5w5acxHporrExhncmtYJv1pZompMoDGXLj05K4LsHhohZzylhzsrndZ6meq9i4j6Op6i4_yKL0xopc0KxQUZkCuZ7ydCOqAuUcP_epMIKg"
+            secret: "ew0KICAiYWxnIjogIlJTMjU2IiwNCiAgImtpZCI6ICJMaXMyNEY4cUFxa2VQeW1ZUk9xVzd3anJKdFEiLA0KICAieDV0IjogIkxpczI0RjhxQXFrZVB5bVlST3FXN3dqckp0USIsDQogICJ0eXAiOiAiSldUIg0KfQ.ew0KICAiYm90IjogIlRFU1QtU0FNLUJPVCIsDQogICJzaXRlIjogImFkbEtoSk9vLVYwIiwNCiAgImNvbnYiOiAiNXd3M3ozQWtNSDE0WWlacENyN2xDOC1uIiwNCiAgInVzZXIiOiAiZGxfMTRiMWVjZmFkZGUxYWQyZTllYWFmN2EwMWU0YjgxOTAiLA0KICAibmJmIjogMTU5MDQ1NDUyOCwNCiAgImV4cCI6IDE1OTA0NTgxMjgsDQogICJpc3MiOiAiaHR0cHM6Ly9kaXJlY3RsaW5lLmJvdGZyYW1ld29yay5jb20vIiwNCiAgImF1ZCI6ICJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8iDQp9.jiL5ywHrMb1-Qn1pWffeApxgB2MfHVab00TuZJXsAyoIAbh0bMcAbhxtt1veVTRCAyqDKmfRcYaycO0LAVegEO12PrThAvI584hCLuMaaz1eov9S3aSxolQZIJUb2t62aGm5AGvCPBYXaganKeb6bclGSSsli_CwKwe8YB5Q0eDFdimF5WdpAXgfpjCW6B1G_Al2kvFwbrpmzGihsQUPqqO-OZrJ49EsqZ0b6sxP90fL5w5acxHporrExhncmtYJv1pZompMoDGXLj05K4LsHhohZzylhzsrndZ6meq9i4j6Op6i4_yKL0xopc0KxQUZkCuZ7ydCOqAuUcP_epMIKg",
+              userID: "dl_14b1ecfadde1ad2e9eaaf7a01e4b8190"
         });
         this.client.activity$.subscribe(
               activity => this.onResponse(activity)
         );
         this.user = {
-            id: 'User'
+            id: 'dl_14b1ecfadde1ad2e9eaaf7a01e4b8190'
         };
         this.bot = {
-            id: 'Botyo-BotTesting',
-            name: 'Travel Agent',
-            avatarUrl: 'https://demos.telerik.com/kendo-ui/content/chat/VacationBot.png'
+            id: 'TEST-SAM-BOT',
+            name: 'Banking Bot Agent',
+            avatarUrl:'https://lh3.googleusercontent.com/PC7tBKOfQRCwjiMjVlFiImEYRKnWn6z_VSOEEmodf-E6In-GApzNmMiO6INBfHh5d1M=s180'
+            // avatarUrl: 'https://demos.telerik.com/kendo-ui/content/chat/VacationBot.png'
         };
         this.addNewMessage = this.addNewMessage.bind(this);
     }
